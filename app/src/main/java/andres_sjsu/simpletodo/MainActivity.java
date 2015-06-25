@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 
                 String Item = (String) lvItems.getItemAtPosition(position);
 
-               Toast.makeText(getApplicationContext(), Item+  "  --view: " , Toast.LENGTH_SHORT).show();
+               //Toast.makeText(getApplicationContext(), Item+  "  --view: " , Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,EditItemActivity.class);
                 //based on item add info to intent
                 intent.putExtra("Item", Item);

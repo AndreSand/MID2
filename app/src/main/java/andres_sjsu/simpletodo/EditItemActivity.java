@@ -20,7 +20,7 @@ public class EditItemActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
 
-        final EditText txtProduct = (EditText) findViewById(R.id.editText);
+        final EditText EditItem = (EditText) findViewById(R.id.editText);
         Bundle extras = getIntent().getExtras();
 
         Intent i = getIntent();
@@ -28,7 +28,7 @@ public class EditItemActivity extends Activity {
         String Item = extras.getString("Item");
         final String id = extras.getString("id");
         // displaying selected product name
-        txtProduct.setText(Item);
+        EditItem.setText(Item);
 
         Button SaveBttn = (Button) findViewById(R.id.SaveButton);
         //setup button listener
@@ -37,7 +37,7 @@ public class EditItemActivity extends Activity {
                 // Prepare data intent
                 Intent data = new Intent();
                 // Pass relevant data back as a result
-                data.putExtra("Item", txtProduct.getText().toString());
+                data.putExtra("Item", EditItem.getText().toString());
                 data.putExtra("id", String.valueOf(id));
                 data.putExtra("code", 200); // ints work too
                 // Activity finished ok, return the data

@@ -14,6 +14,19 @@ The following **required** functionality is completed:
 * [X] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list.
 * [X] User can **persist todo items** and retrieve them properly on app restart
 
+The following **optional** features are implemented:
+
+* [X] Persist the todo items [into SQLite](http://guides.codepath.com/android/Persisting-Data-to-the-Device#sqlite) instead of a text file
+* [X] Improve style of the todo items in the list [using a custom adapter](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView)
+* [X] Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity for editing items
+* [X] Add support for selecting the priority of each todo item (and display in listview item)
+* [X] Tweak the style improving the UI / UX, play with colors, images or backgrounds
+
+The following **additional** features are implemented:
+
+* [X] List anything else that you can get done to improve the app functionality!
+    -I added an AlertDialog for when the user is going to delete a ToDo Item, user has to confirm he wants to delete the ToDo.
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:

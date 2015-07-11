@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/AndreSand/ToDo_List_Android/blob/master/todo_app.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/AndreSand/ExtendingToDo/blob/master/extend_todo_app.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

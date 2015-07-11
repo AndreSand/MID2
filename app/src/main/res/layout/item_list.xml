@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<andres_sjsu.simpletodo.TodoItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="5dp"
+    />

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_name"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="vertical"  >
+
+    <TextView
+        android:id="@+id/lbl_task_description" android:text="@string/task_description_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/txt_task_description"
+        android:layout_width="match_parent"  android:layout_height="wrap_content"
+        android:inputType="text"
+        android:imeOptions="actionDone" />
+
+
+    <TextView
+        android:id="@+id/lbl_priority" android:text="@string/priority_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spn_priority"
+        android:layout_width="wrap_content"
+        android:entries="@array/priorities_array"
+        android:prompt="@string/priorities_prompt"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lbl_due_date" android:text="@string/due_date_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <DatePicker
+        android:id="@+id/dp_due_date"
+        android:calendarViewShown="false"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp" />
+
+
+    <Button
+        android:id="@+id/btn_save_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/save_button_label"
+        android:layout_gravity="right" />
+
+</LinearLayout>

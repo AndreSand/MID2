@@ -116,6 +116,7 @@ public class MainActivity extends ActionBarActivity {
         todoItemDialog.show(fm, "fragment_todo_item_view");
     }
 
+    //Edit the Todo fragment
     private void showEditItemDialog(final Item item) {
         FragmentManager fm = getSupportFragmentManager();
         TodoDialog todoItemDialog = TodoDialog.newInstance(

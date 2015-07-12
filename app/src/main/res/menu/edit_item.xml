@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:omgandroid="http://schemas.android.com/apk/res-auto">
-<!-- Share item -->
-<item
-    android:id="@+id/action_add"
-    android:title="@string/action_add"
-    omgandroid:showAsAction="ifRoom"
-    />
-</menu>

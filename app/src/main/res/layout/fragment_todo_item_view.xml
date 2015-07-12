@@ -41,7 +41,8 @@
         android:calendarViewShown="false"
         android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:datePickerMode="spinner" />
 
 
     <Button

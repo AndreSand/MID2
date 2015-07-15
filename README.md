@@ -24,14 +24,13 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [X] List anything else that you can get done to improve the app functionality!
-    -I added an AlertDialog for when the user is going to delete a ToDo Item, user has to confirm he wants to delete the ToDo.
+* [X] Added an AlertDialog for when the user is going to delete a ToDo Item, user has to confirm he wants to delete the ToDo.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/AndreSand/ExtendingToDo/blob/master/extend_todo_app.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/AndreSand/ExtendingToDo/blob/master/extend_todoApp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

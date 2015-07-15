@@ -116,22 +116,7 @@ public class TodoDialog extends DialogFragment {
             }
         });
 
-        // Show soft keyboard automatically
-//        mEditText.requestFocus();
-//        getDialog().getWindow().setSoftInputMode(
-//                WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         return view;
     }
-
-    public void setSpinnerToValue(Spinner spinner, String value) {
-        int index = 0;
-        SpinnerAdapter adapter = spinner.getAdapter();
-        for (int i = 0; i < adapter.getCount(); i++) {
-            if (adapter.getItem(i).equals(value)) {
-                index = i;
-                break; // terminate loop
-            }
-        }
-        spinner.setSelection(index);
-    }
+    
 }

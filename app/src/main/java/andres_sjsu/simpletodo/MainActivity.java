@@ -3,8 +3,11 @@ package andres_sjsu.simpletodo;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,7 +42,9 @@ public class MainActivity extends ActionBarActivity {
         lvItems.setAdapter(itemsAdapter);
         setupListViewListener();
 
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -102,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
     private void showAddItemDialog() {
         FragmentManager fm = getSupportFragmentManager();
         TodoDialog todoItemDialog = TodoDialog.newInstance(
-                "Add Todo Item", null);
+                "        Add Todo Item", null);
         todoItemDialog.setFinishDialogListener(new TodoDialog.TodoItemDialogListener() {
             public void onFinishDialog(String description, Date date,
                                        Item.Priority priority) {

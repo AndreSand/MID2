@@ -2,6 +2,7 @@ package andres_sjsu.simpletodo;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +71,7 @@ public class TodoDialog extends DialogFragment {
         mEditText = (EditText) view.findViewById(R.id.txt_task_description);
         mEditText.setText(getArguments().getString("description", ""));
 
+
         // Set priority
         mPrioSpinner = (Spinner) view.findViewById(R.id.spn_priority);
         int priority = getArguments().getInt("priority");
@@ -88,6 +90,19 @@ public class TodoDialog extends DialogFragment {
 
         final Button button = (Button) view.findViewById(R.id.btn_save_item);
 
+        //Description checker don't accept empty field
+        /*
+        String strUserName = mEditText.getText().toString();
+
+        if(strUserName.equals("")) {
+            mEditText.setError("Your message");
+
+        } else {
+            button.setEnabled(true);
+        }
+*/
+
+        //save button below
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 dismiss();

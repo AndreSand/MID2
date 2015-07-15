@@ -44,6 +44,7 @@ public class TodoItemView extends RelativeLayout {
 
     private void setupChildren() {
         mDetailsView = (TextView) findViewById(R.id.todoitem_DescTextView);
+        mDetailsView.setTextColor(getResources().getColor(R.color.light_blue));
         mDueDateView = (TextView) findViewById(R.id.todoitem_DueDateTextView);
         mPriorityView = (TextView) findViewById(R.id.todoitem_PriorityTextView);
     }
@@ -54,7 +55,7 @@ public class TodoItemView extends RelativeLayout {
         switch (item.getPriority()) {
             case LOW_PRIORITY:
                 mPriorityView.setText("Low");
-                mPriorityView.setTextColor(getResources().getColor(R.color.bluish));
+                mPriorityView.setTextColor(getResources().getColor(R.color.black));
                 mPriorityView.setVisibility(View.VISIBLE);
                 break;
             case NORMAL_PRIORITY:
@@ -63,15 +64,15 @@ public class TodoItemView extends RelativeLayout {
             case HIGH_PRIORITY:
                 mPriorityView.setText("High");
                 mPriorityView.setVisibility(View.VISIBLE);
-                mPriorityView.setTextColor(getResources().getColor(R.color.redish));
+                mPriorityView.setTextColor(getResources().getColor(R.color.black));
                 break;
         }
         Date dueDate = item.getDueDate();
         Date now = new Date();
         if (dueDate.before(now)) {
-            mDueDateView.setTextColor(getResources().getColor(R.color.red));
+            mDueDateView.setTextColor(getResources().getColor(R.color.black));
         } else {
-            mDueDateView.setTextColor(getResources().getColor(R.color.blue));
+            mDueDateView.setTextColor(getResources().getColor(R.color.black));
         }
     }
 }

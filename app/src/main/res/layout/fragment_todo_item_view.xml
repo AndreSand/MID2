@@ -1,58 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/edit_name"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
-    android:layout_gravity="center" android:orientation="vertical"  >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#81dcb6"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/lbl_task_description" android:text="@string/task_description_title"
-        android:layout_marginTop="5dp"
+        android:id="@+id/lbl_task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        android:layout_marginTop="5dp"
+        android:text="@string/task_description_title"
+       />
 
     <EditText
         android:id="@+id/txt_task_description"
-        android:layout_width="match_parent"  android:layout_height="wrap_content"
-        android:inputType="text"
-        android:imeOptions="actionDone" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/lbl_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="5dp"
+            android:text="@string/priority_title"
+           />
+
+        <Spinner
+            android:id="@+id/spn_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/priorities_array"
+            android:prompt="@string/priorities_prompt" />
+
+
+    </LinearLayout>
 
 
     <TextView
-        android:id="@+id/lbl_priority" android:text="@string/priority_title"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" />
-
-    <Spinner
-        android:id="@+id/spn_priority"
+        android:id="@+id/lbl_due_date"
         android:layout_width="wrap_content"
-        android:entries="@array/priorities_array"
-        android:prompt="@string/priorities_prompt"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/lbl_due_date" android:text="@string/due_date_title"
-        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        android:layout_marginTop="5dp"
+        android:text="@string/due_date_title"
+        />
 
     <DatePicker
         android:id="@+id/dp_due_date"
-        android:calendarViewShown="false"
-        android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
+
         android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:calendarViewShown="false"
         android:datePickerMode="spinner" />
 
 
     <Button
         android:id="@+id/btn_save_item"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="24dp"
+
+        android:layout_gravity="center"
         android:layout_marginBottom="5dp"
+        android:layout_marginTop="24dp"
+        android:background="#2d7b5b"
         android:text="@string/save_button_label"
-        android:layout_gravity="right" />
+        android:textColor="#ffffff" />
 
 </LinearLayout>

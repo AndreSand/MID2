@@ -1,4 +1,4 @@
-package andres_sjsu.simpletodo;
+package andres_sjsu.mid;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

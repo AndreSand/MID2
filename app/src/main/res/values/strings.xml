@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">SimpleToDo</string>
+    <string name="app_name">My Important Dates</string>
 
-    <string name="action_add">Add ToDo</string>
+    <string name="action_add">Add Date</string>
     <string name="hello_world">Hello world!</string>
-    <string name="add_hint">Add a new item</string>
-    <string name="add_button_label">Add ToDo</string>
+    <string name="add_hint">Add a new date</string>
+    <string name="add_button_label">Add Important Date</string>
     <string name="title_activity_edit_item">EditItemActivity</string>
-    <string name="edit_item_label">Edit Item Below:</string>
+    <string name="edit_item_label">Edit Date Below:</string>
     <string name="priorities_prompt">Normal</string>
     <string name="save_button_label">Save</string>
     <string name="priority_title">Priority:</string>
     <string name="task_description_title">Description:</string>
-    <string name="due_date_title">Due Date:</string>
+    <string name="due_date_title">Date:</string>
 </resources>

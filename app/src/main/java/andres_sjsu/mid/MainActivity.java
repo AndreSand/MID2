@@ -1,13 +1,12 @@
-package andres_sjsu.simpletodo;
+package andres_sjsu.mid;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 import java.util.Date;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         lvItems = (ListView) findViewById(R.id.lvItems);
 
@@ -62,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
 
 
                 AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-                adb.setTitle("Are you sure you want to delete this ToDo?");
+                adb.setTitle("Are you sure you want to delete this Important Date");
                 adb.setIcon(android.R.drawable.ic_dialog_alert);
                 adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -71,7 +70,7 @@ public class MainActivity extends ActionBarActivity {
                         itemsAdapter.notifyDataSetChanged();
                         item.delete();
                         // saveItems();
-                        Toast.makeText(MainActivity.this, "ToDo was deleted", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Date was deleted", Toast.LENGTH_SHORT).show();
                     } });
 
                 adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -107,7 +106,7 @@ public class MainActivity extends ActionBarActivity {
     private void showAddItemDialog() {
         FragmentManager fm = getSupportFragmentManager();
         TodoDialog todoItemDialog = TodoDialog.newInstance(
-                "        Add Todo Item", null);
+                "        Add Date", null);
         todoItemDialog.setFinishDialogListener(new TodoDialog.TodoItemDialogListener() {
             public void onFinishDialog(String description, Date date,
                                        Item.Priority priority) {
@@ -125,7 +124,7 @@ public class MainActivity extends ActionBarActivity {
     private void showEditItemDialog(final Item item) {
         FragmentManager fm = getSupportFragmentManager();
         TodoDialog todoItemDialog = TodoDialog.newInstance(
-                "Edit Todo Item", item);
+                "Edit Date", item);
         todoItemDialog.setFinishDialogListener(new TodoDialog.TodoItemDialogListener() {
             public void onFinishDialog(String description, Date date,
                                        Item.Priority priority) {

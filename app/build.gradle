@@ -1,16 +1,27 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "andres_sjsu.simpletodo"
+        applicationId "com.myimportantdates"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        versionCode 9
+        versionName "1.0.3"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,11 +32,20 @@ android {
 repositories {
     jcenter()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+    maven {
+        url 'https://github.com/rockerhieu/mvn-repo/raw/master/'
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.rockerhieu.emojicon:library:1.3.3'
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
 
 }

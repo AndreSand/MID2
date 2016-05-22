@@ -10,6 +10,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Date;
 
 import model.Item;
@@ -69,6 +72,9 @@ public class TodoDialog extends DialogFragment {
         mEditText = (EditText) view.findViewById(R.id.txt_task_description);
         mEditText.setText(getArguments().getString("description", ""));
 
+        AdView mAdView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         // Set priority
         mPrioSpinner = (Spinner) view.findViewById(R.id.spn_priority);
@@ -116,5 +122,5 @@ public class TodoDialog extends DialogFragment {
 
         return view;
     }
-    
+
 }

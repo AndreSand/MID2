@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import model.Item;
 
@@ -40,6 +42,11 @@ public class MainActivity extends ActionBarActivity {
         itemsAdapter = new TodoCursorAdapter(this, items);
         lvItems.setAdapter(itemsAdapter);
         setupListViewListener();
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
 
     }

@@ -21,6 +21,16 @@
         android:divider="#4CCD98"
         android:layout_centerHorizontal="true" >
     </ListView>
+
+    <Button
+        android:id="@+id/privacyPolicyButton"
+        android:layout_below="@id/lvItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="22dp"
+        android:text="Privacy Policy"
+        android:textColor="#ffffff" />
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"

@@ -72,10 +72,6 @@ public class TodoDialog extends DialogFragment {
         mEditText = (EditText) view.findViewById(R.id.txt_task_description);
         mEditText.setText(getArguments().getString("description", ""));
 
-        AdView mAdView = (AdView)view.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
         // Set priority
         mPrioSpinner = (Spinner) view.findViewById(R.id.spn_priority);
         int priority = getArguments().getInt("priority");
